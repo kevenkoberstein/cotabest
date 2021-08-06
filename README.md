@@ -36,3 +36,17 @@ Para instalar os pacotes necessários para o funcionamento do projeto no ambient
 ``` bash
 python -m pip install -r requirements.txt
 ```
+
+# Rodando a aplicação
+
+Para rodar a aplicação basta executar o comando abaixo.
+
+``` bash
+python cotabest_api.py
+```
+
+# Documentação da API
+
+A documentação dos métodos aceitos, rotas, exemplos foi feita utilizando o Postman e está disponível online para consulta no endereço a seguir
+
+> https://documenter.getpostman.com/view/16981531/Tzsimjdy

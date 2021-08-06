@@ -99,7 +99,7 @@ def add_to_shopping_cart():
     return jsonify(errors), 400
 
 
-@app.route('/api/update_shopping_cart', methods=['POST'])
+@app.route('/api/update_shopping_cart', methods=['PUT'])
 def update_to_shopping_cart():
     """ Rota da api que verifica se o produto existe no carrinho, validando as informações necessárias, e atualizando seu valor
 
@@ -136,7 +136,7 @@ def update_to_shopping_cart():
     return jsonify(errors), 400
 
 
-@app.route('/api/remove_shopping_cart', methods=['POST'])
+@app.route('/api/remove_shopping_cart', methods=['DELETE'])
 def remove_from_shopping_cart():
     """ Rota da api que verifica se o produto existe no carrinho de compras, e caso exista remove
 
@@ -177,8 +177,6 @@ def checkout():
     global shopping_cart_1
 
     data = funcs.get_shopping_cart(shopping_cart_1)
-
-    print(data)
 
     # Caso não tenha nenhum produto no carrinho
     if data == {'total-price': 0, 'items': []}:
