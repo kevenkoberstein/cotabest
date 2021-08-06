@@ -178,6 +178,12 @@ def checkout():
 
     data = funcs.get_shopping_cart(shopping_cart_1)
 
+    print(data)
+
+    # Caso não tenha nenhum produto no carrinho
+    if data == {'total-price': 0, 'items': []}:
+        return jsonify({'error': 'Não existe nenhum produto no carrinho !!!'}), 400 
+    
     # Gerando o id de pedido
     data['id'] = uuid.uuid4()
 
