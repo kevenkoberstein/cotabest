@@ -12,13 +12,7 @@ app = Flask(__name__)
 # Criando um carrinho de compras
 shopping_cart_1 = cls.Shopping_Cart()
 
-# item_1 = cls.Item(1, "teste_1", 10.0, 5, 5, 100, 10)
-# item_2 = cls.Item(2, "teste_2", 1.0, 10, 5, 200, 20)
-
-# shopping_cart_1.add_to_shopping_cart(item_1)
-# shopping_cart_1.add_to_shopping_cart(item_2)
-
-@app.route('/api/list_products', methods=['GET','POST'])
+@app.route('/api/list_products', methods=['GET'])
 def list_products():
     """ Rota da api que retorna a lista de produtos
 
