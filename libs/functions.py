@@ -34,7 +34,7 @@ def find_products(name:str, products:list):
     # Varre a lista de produtos
     for product in products:
         # Caso encontre correspondência adiciona na lista de matches
-        if product['name'].find(name) != -1:
+        if product['name'].lower().find(name.lower()) != -1:
             matches.append(product)
 
     return matches
